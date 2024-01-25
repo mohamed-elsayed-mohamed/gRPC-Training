@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "2IR08Q5V6CJTY/wGzJW+musU0BO9XTDRPbzbVGsJ9QHmyzp2dHvgQ/gXqCaxhHeLMNy/Z0YybQvWRjChp6IK8Q==",
+  "success": true,
+  "projectFilePath": "/Users/me/Documents/Development/dotnet/gRPCProject/server/server.csproj",
+  "expectedPackageFiles": [
+    "/Users/me/.nuget/packages/google.protobuf/3.25.2/google.protobuf.3.25.2.nupkg.sha512",
+    "/Users/me/.nuget/packages/grpc/2.46.6/grpc.2.46.6.nupkg.sha512",
+    "/Users/me/.nuget/packages/grpc.core/2.46.6/grpc.core.2.46.6.nupkg.sha512",
+    "/Users/me/.nuget/packages/grpc.core.api/2.46.6/grpc.core.api.2.46.6.nupkg.sha512",
+    "/Users/me/.nuget/packages/grpc.tools/2.60.0/grpc.tools.2.60.0.nupkg.sha512",
+    "/Users/me/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}
