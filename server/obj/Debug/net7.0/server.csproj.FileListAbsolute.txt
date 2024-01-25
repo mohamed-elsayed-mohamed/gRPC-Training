@@ -22,11 +22,6 @@
 /Users/me/Dot NET Projects/gRPCProject/server/obj/Debug/net7.0/server.pdb
 /Users/me/Dot NET Projects/gRPCProject/server/obj/Debug/net7.0/server.genruntimeconfig.cache
 /Users/me/Dot NET Projects/gRPCProject/server/obj/Debug/net7.0/ref/server.dll
-/Users/me/Documents/Development/dotnet/gRPCProject/server/obj/Debug/net7.0/server.csproj.AssemblyReference.cache
-/Users/me/Documents/Development/dotnet/gRPCProject/server/obj/Debug/net7.0/server.GeneratedMSBuildEditorConfig.editorconfig
-/Users/me/Documents/Development/dotnet/gRPCProject/server/obj/Debug/net7.0/server.dll
-/Users/me/Documents/Development/dotnet/gRPCProject/server/obj/Debug/net7.0/refint/server.dll
-/Users/me/Documents/Development/dotnet/gRPCProject/server/obj/Debug/net7.0/server.pdb
 /Users/me/Documents/Development/dotnet/gRPCProject/server/bin/Debug/net7.0/server
 /Users/me/Documents/Development/dotnet/gRPCProject/server/bin/Debug/net7.0/server.deps.json
 /Users/me/Documents/Development/dotnet/gRPCProject/server/bin/Debug/net7.0/server.runtimeconfig.json
@@ -40,9 +35,14 @@
 /Users/me/Documents/Development/dotnet/gRPCProject/server/bin/Debug/net7.0/runtimes/osx-x64/native/libgrpc_csharp_ext.x64.dylib
 /Users/me/Documents/Development/dotnet/gRPCProject/server/bin/Debug/net7.0/runtimes/win-x64/native/grpc_csharp_ext.x64.dll
 /Users/me/Documents/Development/dotnet/gRPCProject/server/bin/Debug/net7.0/runtimes/win-x86/native/grpc_csharp_ext.x86.dll
+/Users/me/Documents/Development/dotnet/gRPCProject/server/obj/Debug/net7.0/server.csproj.AssemblyReference.cache
+/Users/me/Documents/Development/dotnet/gRPCProject/server/obj/Debug/net7.0/server.GeneratedMSBuildEditorConfig.editorconfig
 /Users/me/Documents/Development/dotnet/gRPCProject/server/obj/Debug/net7.0/server.AssemblyInfoInputs.cache
 /Users/me/Documents/Development/dotnet/gRPCProject/server/obj/Debug/net7.0/server.AssemblyInfo.cs
 /Users/me/Documents/Development/dotnet/gRPCProject/server/obj/Debug/net7.0/server.csproj.CoreCompileInputs.cache
 /Users/me/Documents/Development/dotnet/gRPCProject/server/obj/Debug/net7.0/server.csproj.CopyComplete
+/Users/me/Documents/Development/dotnet/gRPCProject/server/obj/Debug/net7.0/server.dll
+/Users/me/Documents/Development/dotnet/gRPCProject/server/obj/Debug/net7.0/refint/server.dll
+/Users/me/Documents/Development/dotnet/gRPCProject/server/obj/Debug/net7.0/server.pdb
 /Users/me/Documents/Development/dotnet/gRPCProject/server/obj/Debug/net7.0/server.genruntimeconfig.cache
 /Users/me/Documents/Development/dotnet/gRPCProject/server/obj/Debug/net7.0/ref/server.dll

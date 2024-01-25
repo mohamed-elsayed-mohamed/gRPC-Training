@@ -22,11 +22,6 @@
 /Users/me/Dot NET Projects/gRPCProject/client/obj/Debug/net7.0/client.pdb
 /Users/me/Dot NET Projects/gRPCProject/client/obj/Debug/net7.0/client.genruntimeconfig.cache
 /Users/me/Dot NET Projects/gRPCProject/client/obj/Debug/net7.0/ref/client.dll
-/Users/me/Documents/Development/dotnet/gRPCProject/client/obj/Debug/net7.0/client.csproj.AssemblyReference.cache
-/Users/me/Documents/Development/dotnet/gRPCProject/client/obj/Debug/net7.0/client.GeneratedMSBuildEditorConfig.editorconfig
-/Users/me/Documents/Development/dotnet/gRPCProject/client/obj/Debug/net7.0/client.dll
-/Users/me/Documents/Development/dotnet/gRPCProject/client/obj/Debug/net7.0/refint/client.dll
-/Users/me/Documents/Development/dotnet/gRPCProject/client/obj/Debug/net7.0/client.pdb
 /Users/me/Documents/Development/dotnet/gRPCProject/client/bin/Debug/net7.0/client
 /Users/me/Documents/Development/dotnet/gRPCProject/client/bin/Debug/net7.0/client.deps.json
 /Users/me/Documents/Development/dotnet/gRPCProject/client/bin/Debug/net7.0/client.runtimeconfig.json
@@ -40,9 +35,14 @@
 /Users/me/Documents/Development/dotnet/gRPCProject/client/bin/Debug/net7.0/runtimes/osx-x64/native/libgrpc_csharp_ext.x64.dylib
 /Users/me/Documents/Development/dotnet/gRPCProject/client/bin/Debug/net7.0/runtimes/win-x64/native/grpc_csharp_ext.x64.dll
 /Users/me/Documents/Development/dotnet/gRPCProject/client/bin/Debug/net7.0/runtimes/win-x86/native/grpc_csharp_ext.x86.dll
+/Users/me/Documents/Development/dotnet/gRPCProject/client/obj/Debug/net7.0/client.csproj.AssemblyReference.cache
+/Users/me/Documents/Development/dotnet/gRPCProject/client/obj/Debug/net7.0/client.GeneratedMSBuildEditorConfig.editorconfig
 /Users/me/Documents/Development/dotnet/gRPCProject/client/obj/Debug/net7.0/client.AssemblyInfoInputs.cache
 /Users/me/Documents/Development/dotnet/gRPCProject/client/obj/Debug/net7.0/client.AssemblyInfo.cs
 /Users/me/Documents/Development/dotnet/gRPCProject/client/obj/Debug/net7.0/client.csproj.CoreCompileInputs.cache
 /Users/me/Documents/Development/dotnet/gRPCProject/client/obj/Debug/net7.0/client.csproj.CopyComplete
+/Users/me/Documents/Development/dotnet/gRPCProject/client/obj/Debug/net7.0/client.dll
+/Users/me/Documents/Development/dotnet/gRPCProject/client/obj/Debug/net7.0/refint/client.dll
+/Users/me/Documents/Development/dotnet/gRPCProject/client/obj/Debug/net7.0/client.pdb
 /Users/me/Documents/Development/dotnet/gRPCProject/client/obj/Debug/net7.0/client.genruntimeconfig.cache
 /Users/me/Documents/Development/dotnet/gRPCProject/client/obj/Debug/net7.0/ref/client.dll

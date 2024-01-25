@@ -1,4 +1,5 @@
-﻿using Greet;
+﻿using Calculator;
+using Greet;
 using Grpc.Core;
 using server;
 
@@ -12,7 +13,7 @@ internal class Program
 		{
 			server = new Server()
 			{
-				Services = { GreetingService.BindService(new GreetingServiceImpl()) },
+				Services = { GreetingService.BindService(new GreetingServiceImpl()), CalculatorService.BindService(new CalculatorServiceImp()) },
 				Ports = { new ServerPort("localhost", PORT, ServerCredentials.Insecure) }
 			};
 
