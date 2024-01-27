@@ -13,4 +13,13 @@ public class GreetingServiceImpl : GreetingServiceBase
 		return Task.FromResult(new GreetingResponse() { Result = result });
 	}
 
+	public override async Task GreeManyTimes(GreeManyTimesRequest request, IServerStreamWriter<GreetManyTimesResponse> responseStream, ServerCallContext context)
+	{
+		Console.WriteLine("The server recieved the request from {0} {1}", request.Greeting.FirstName, request.Greeting.LastName);
+
+		foreach (int i in Enumerable.Range(1, 10))
+		{
+			await responseStream.WriteAsync(new GreetManyTimesResponse { Result = i.ToString() });
+		}
+	}
 }
