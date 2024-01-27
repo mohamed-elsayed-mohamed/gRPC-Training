@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Protos", "Protos", "{51DFA9
 		dummy.proto = dummy.proto
 		greeting.proto = greeting.proto
 		calculator.proto = calculator.proto
+		prime.proto = prime.proto
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "client", "client\client.csproj", "{BD2FA1D1-707D-457B-AD6D-8899223C6660}"

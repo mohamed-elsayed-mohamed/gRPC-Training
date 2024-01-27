@@ -1,6 +1,7 @@
 
 using Calculator;
 using Grpc.Core;
+using Prime;
 
 internal class Program
 {
@@ -14,6 +15,7 @@ internal class Program
 		if (channel.State == ChannelState.Ready)
 			Console.WriteLine("Connected!");
 
+		/*
 		var client = new CalculatorService.CalculatorServiceClient(channel);
 
 		Console.Write("Please enter first number: ");
@@ -27,6 +29,20 @@ internal class Program
 		SumResponse sumResponse = client.Sum(new SumRequest() { FirstNum = firstNumber, SecondNum = secondNumber });
 
 		Console.WriteLine($"Result is: {sumResponse.Result}");
+		*/
+
+		var client = new PrimeNumberService.PrimeNumberServiceClient(channel);
+
+		var request = new PrimeNumberRequest() { Number = 120 };
+
+		var response = client.PrimeNumberFactor(request);
+
+		while (await response.ResponseStream.MoveNext())
+		{
+			Console.WriteLine("Factor: {0}", response.ResponseStream.Current.PrimeFactor);
+			await Task.Delay(1000);
+		}
+
 
 		channel.ShutdownAsync().Wait();
 		Console.ReadKey();
