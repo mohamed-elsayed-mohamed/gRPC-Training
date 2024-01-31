@@ -1,0 +1,16 @@
+syntax="proto3";
+
+
+package average;
+
+message AverageRequest{
+    int32 number=1;
+}
+
+message AverageResponse{
+    double result=1;
+}
+
+service averageService {
+    rpc avg(stream AverageRequest) returns (AverageResponse) {}
+}

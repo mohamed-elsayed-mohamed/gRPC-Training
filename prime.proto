@@ -1,0 +1,15 @@
+syntax="proto3";
+
+package prime;
+
+message PrimeNumberRequest {
+    int32 number=1;
+}
+
+message PrimeNumberRespose {
+    int32 primeFactor=1;
+}
+
+service PrimeNumberService {
+    rpc PrimeNumberFactor(PrimeNumberRequest) returns (stream PrimeNumberRespose) {}
+}
