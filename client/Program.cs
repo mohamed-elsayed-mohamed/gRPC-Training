@@ -25,13 +25,23 @@ internal class Program
 		// Console.WriteLine(response.Result);
 
 		var greeting = new Greeting { FirstName = "Mohamed", LastName = "Elsayed" };
-		var response = client.GreeManyTimes(new GreeManyTimesRequest { Greeting = greeting });
+		// var response = client.GreeManyTimes(new GreeManyTimesRequest { Greeting = greeting });
 
-		while (await response.ResponseStream.MoveNext())
-		{
-			Console.WriteLine(response.ResponseStream.Current.Result);
-			await Task.Delay(1000);
-		}
+		// while (await response.ResponseStream.MoveNext())
+		// {
+		// 	Console.WriteLine(response.ResponseStream.Current.Result);
+		// 	await Task.Delay(1000);
+		// }
+
+		var request = new LongGreeRequest { Greeting = greeting };
+		var stream = client.LongGreat();
+
+		foreach (int i in Enumerable.Range(1, 5))
+			await stream.RequestStream.WriteAsync(request);
+
+		await stream.RequestStream.CompleteAsync();
+		var response = await stream.ResponseAsync;
+		Console.WriteLine(response.Result);
 
 		channel.ShutdownAsync().Wait();
 		Console.ReadKey();

@@ -23,10 +23,21 @@ message GreetManyTimesResponse {
     string result=1;
 }
 
+message LongGreeRequest {
+    Greeting Greeting=1;
+}
+
+message LongGreetResponse {
+    string result=1;
+}
+
 service GreetingService {
     // Unary
     rpc Greet(GreetingRequest) returns (GreetingResponse) {}
 
     // Server Streaming
     rpc GreeManyTimes(GreeManyTimesRequest) returns (stream  GreetManyTimesResponse) {}
+
+    // Client Straming
+    rpc LongGreat(stream LongGreeRequest) returns (LongGreetResponse) {}
 }

@@ -22,4 +22,17 @@ public class GreetingServiceImpl : GreetingServiceBase
 			await responseStream.WriteAsync(new GreetManyTimesResponse { Result = i.ToString() });
 		}
 	}
+
+	public override async Task<LongGreetResponse> LongGreat(IAsyncStreamReader<LongGreeRequest> requestStream, ServerCallContext context)
+	{
+		string result = "";
+
+		while (await requestStream.MoveNext())
+		{
+			result += string.Format("Hello {0} {1} {2}", requestStream.Current.Greeting.FirstName, requestStream.Current.Greeting.LastName, Environment.NewLine);
+		}
+
+		return new LongGreetResponse { Result = result };
+	}
+
 }
