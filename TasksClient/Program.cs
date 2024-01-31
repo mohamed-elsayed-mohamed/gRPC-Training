@@ -1,4 +1,5 @@
 
+using Average;
 using Calculator;
 using Grpc.Core;
 using Prime;
@@ -31,6 +32,7 @@ internal class Program
 		Console.WriteLine($"Result is: {sumResponse.Result}");
 		*/
 
+		/*
 		var client = new PrimeNumberService.PrimeNumberServiceClient(channel);
 
 		var request = new PrimeNumberRequest() { Number = 120 };
@@ -42,6 +44,20 @@ internal class Program
 			Console.WriteLine("Factor: {0}", response.ResponseStream.Current.PrimeFactor);
 			await Task.Delay(1000);
 		}
+		*/
+
+		var client = new averageService.averageServiceClient(channel);
+		var stream = client.avg();
+
+		foreach (var item in Enumerable.Range(1, 10))
+		{
+			var request = new AverageRequest { Number = Random.Shared.Next(1, 100) };
+			await stream.RequestStream.WriteAsync(request);
+		}
+
+		await stream.RequestStream.CompleteAsync();
+
+		Console.WriteLine(stream.ResponseAsync.Result.Result);
 
 
 		channel.ShutdownAsync().Wait();

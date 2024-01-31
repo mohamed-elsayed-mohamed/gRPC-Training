@@ -1,4 +1,5 @@
-﻿using Calculator;
+﻿using Average;
+using Calculator;
 using Greet;
 using Grpc.Core;
 using Prime;
@@ -14,7 +15,12 @@ internal class Program
 		{
 			server = new Server()
 			{
-				Services = { PrimeNumberService.BindService(new PrimeNumberServiceImp()), GreetingService.BindService(new GreetingServiceImpl()), CalculatorService.BindService(new CalculatorServiceImp()) },
+				Services = {
+					averageService.BindService(new AverageServiceImp()),
+					PrimeNumberService.BindService(new PrimeNumberServiceImp()),
+					GreetingService.BindService(new GreetingServiceImpl()),
+					CalculatorService.BindService(new CalculatorServiceImp())
+					},
 				Ports = { new ServerPort("localhost", PORT, ServerCredentials.Insecure) }
 			};
 
