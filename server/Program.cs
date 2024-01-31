@@ -2,6 +2,7 @@
 using Calculator;
 using Greet;
 using Grpc.Core;
+using Max;
 using Prime;
 using server;
 
@@ -16,6 +17,7 @@ internal class Program
 			server = new Server()
 			{
 				Services = {
+					FindMaxService.BindService(new FindMaxServiceImp()),
 					averageService.BindService(new AverageServiceImp()),
 					PrimeNumberService.BindService(new PrimeNumberServiceImp()),
 					GreetingService.BindService(new GreetingServiceImpl()),

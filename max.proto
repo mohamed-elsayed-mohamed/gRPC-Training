@@ -1,0 +1,15 @@
+syntax="proto3";
+
+package max;
+
+message MaxRequest {
+    int32 number=1;
+}
+
+message MaxResponse {
+    int32 max=1;
+}
+
+service FindMaxService {
+    rpc FinMax(stream MaxRequest) returns (stream MaxResponse) {}
+}

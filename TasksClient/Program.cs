@@ -2,6 +2,7 @@
 using Average;
 using Calculator;
 using Grpc.Core;
+using Max;
 using Prime;
 
 internal class Program
@@ -46,20 +47,41 @@ internal class Program
 		}
 		*/
 
-		var client = new averageService.averageServiceClient(channel);
-		var stream = client.avg();
+		// var client = new averageService.averageServiceClient(channel);
+		// var stream = client.avg();
+
+		// foreach (var item in Enumerable.Range(1, 10))
+		// {
+		// 	var request = new AverageRequest { Number = Random.Shared.Next(1, 100) };
+		// 	await stream.RequestStream.WriteAsync(request);
+		// }
+
+		// await stream.RequestStream.CompleteAsync();
+
+		// Console.WriteLine(stream.ResponseAsync.Result.Result);
+
+
+		var client = new FindMaxService.FindMaxServiceClient(channel);
+		var stream = client.FinMax();
+
+		var responseTask = Task.Run(async () =>
+		{
+			while (await stream.ResponseStream.MoveNext())
+			{
+				Console.WriteLine("Recieved: " + stream.ResponseStream.Current.Max + Environment.NewLine);
+			}
+		});
 
 		foreach (var item in Enumerable.Range(1, 10))
 		{
-			var request = new AverageRequest { Number = Random.Shared.Next(1, 100) };
-			await stream.RequestStream.WriteAsync(request);
+			int num = Random.Shared.Next(-1000, 1000);
+			Console.WriteLine($"Sending: {num}");
+			await stream.RequestStream.WriteAsync(new MaxRequest { Number = num });
+			await Task.Delay(1000);
 		}
 
 		await stream.RequestStream.CompleteAsync();
-
-		Console.WriteLine(stream.ResponseAsync.Result.Result);
-
-
+		await responseTask;
 		channel.ShutdownAsync().Wait();
 		Console.ReadKey();
 	}
