@@ -35,4 +35,16 @@ public class GreetingServiceImpl : GreetingServiceBase
 		return new LongGreetResponse { Result = result };
 	}
 
+	public override async Task GreatEveryone(IAsyncStreamReader<GreetingRequest> requestStream, IServerStreamWriter<GreetingResponse> responseStream, ServerCallContext context)
+	{
+		while (await requestStream.MoveNext())
+		{
+			var res = string.Format("{0} {1}", requestStream.Current.Greeting.FirstName, requestStream.Current.Greeting.LastName);
+			Console.WriteLine("Recieved from: " + res);
+
+			await responseStream.WriteAsync(new GreetingResponse { Result = "Hi " + res });
+		}
+	}
+
+
 }

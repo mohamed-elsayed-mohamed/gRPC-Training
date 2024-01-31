@@ -40,4 +40,7 @@ service GreetingService {
 
     // Client Straming
     rpc LongGreat(stream LongGreeRequest) returns (LongGreetResponse) {}
+
+    // BiDirectional Streaming
+    rpc GreatEveryone(stream GreetingRequest) returns (stream GreetingResponse) {}
 }

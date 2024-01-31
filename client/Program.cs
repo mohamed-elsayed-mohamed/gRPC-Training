@@ -33,15 +33,35 @@ internal class Program
 		// 	await Task.Delay(1000);
 		// }
 
-		var request = new LongGreeRequest { Greeting = greeting };
-		var stream = client.LongGreat();
 
-		foreach (int i in Enumerable.Range(1, 5))
-			await stream.RequestStream.WriteAsync(request);
+		// var request = new LongGreeRequest { Greeting = greeting };
+		// var stream = client.LongGreat();
+
+		// foreach (int i in Enumerable.Range(1, 5))
+		// 	await stream.RequestStream.WriteAsync(request);
+
+		// await stream.RequestStream.CompleteAsync();
+		// var response = await stream.ResponseAsync;
+		// Console.WriteLine(response.Result);
+
+
+		var stream = client.GreatEveryone();
+		var responseTask = Task.Run(async () =>
+		{
+			while (await stream.ResponseStream.MoveNext())
+			{
+				Console.WriteLine(stream.ResponseStream.Current.Result);
+				await Task.Delay(1000);
+			}
+		});
+
+		foreach (var item in Enumerable.Range(1, 5))
+		{
+			await stream.RequestStream.WriteAsync(new GreetingRequest { Greeting = greeting });
+		}
 
 		await stream.RequestStream.CompleteAsync();
-		var response = await stream.ResponseAsync;
-		Console.WriteLine(response.Result);
+		await responseTask;
 
 		channel.ShutdownAsync().Wait();
 		Console.ReadKey();

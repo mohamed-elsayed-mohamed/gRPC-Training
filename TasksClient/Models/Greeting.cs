@@ -31,13 +31,14 @@ namespace Greet {
             "c1JlcXVlc3QSIQoIR3JlZXRpbmcYASABKAsyDy5ncmVldC5HcmVldGluZyIo",
             "ChZHcmVldE1hbnlUaW1lc1Jlc3BvbnNlEg4KBnJlc3VsdBgBIAEoCSI0Cg9M",
             "b25nR3JlZVJlcXVlc3QSIQoIR3JlZXRpbmcYASABKAsyDy5ncmVldC5HcmVl",
-            "dGluZyIjChFMb25nR3JlZXRSZXNwb25zZRIOCgZyZXN1bHQYASABKAky4QEK",
+            "dGluZyIjChFMb25nR3JlZXRSZXNwb25zZRIOCgZyZXN1bHQYASABKAkyqQIK",
             "D0dyZWV0aW5nU2VydmljZRI6CgVHcmVldBIWLmdyZWV0LkdyZWV0aW5nUmVx",
             "dWVzdBoXLmdyZWV0LkdyZWV0aW5nUmVzcG9uc2UiABJPCg1HcmVlTWFueVRp",
             "bWVzEhsuZ3JlZXQuR3JlZU1hbnlUaW1lc1JlcXVlc3QaHS5ncmVldC5HcmVl",
             "dE1hbnlUaW1lc1Jlc3BvbnNlIgAwARJBCglMb25nR3JlYXQSFi5ncmVldC5M",
-            "b25nR3JlZVJlcXVlc3QaGC5ncmVldC5Mb25nR3JlZXRSZXNwb25zZSIAKAFi",
-            "BnByb3RvMw=="));
+            "b25nR3JlZVJlcXVlc3QaGC5ncmVldC5Mb25nR3JlZXRSZXNwb25zZSIAKAES",
+            "RgoNR3JlYXRFdmVyeW9uZRIWLmdyZWV0LkdyZWV0aW5nUmVxdWVzdBoXLmdy",
+            "ZWV0LkdyZWV0aW5nUmVzcG9uc2UiACgBMAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
